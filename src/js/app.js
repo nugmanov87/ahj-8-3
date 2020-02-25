@@ -2,7 +2,7 @@
 import API from './Api.js';
 
 // const api = new API('http://localhost:7070/inst');
-const api = new API('https://ahj-8-3-3.herokuapp.com/inst');
+const api = new API('https://ahj-8-3-3.herokuapp.com/');
 
 function convertDate(value) {
   const rValue = value < 10 ? `0${value}` : value;
