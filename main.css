@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+.window {
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+}
+
+.button {
+  border: 1px solid;
+  padding: 10px 30px;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+.messanger {
+  display: flex;
+}
+
+#instances {
+  border: 1px solid;
+  padding: 10px;
+  overflow: auto;
+  border-radius: 15px;
+  margin-right: 20px;
+  width: 400px;
+}
+
+.instance-list {
+  list-style: none;
+  padding: 0;
+}
+
+.instance-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.instance-item span {
+  padding: 2px 0;
+}
+
+.instance-status {
+  display: flex;
+}
+
+.status {
+  width: 16px;
+  height: 16px;
+  left: 60px;
+  border: 1px solid #000000;
+  border-radius: 16px;
+  background-color: #000000;
+  position: absolute;
+}
+
+.status::after {
+  content: 'Stoped';
+  position: absolute;
+  left: 20px;
+}
+
+.instance-item.started .status {
+  border: 1px solid #00de00;
+  background-color: #00de00;
+}
+
+.instance-item.started .status::after {
+  content: 'Running';
+}
+
+.instance-actions {
+  display: flex;
+  position: relative;
+}
+
+.status-icon {
+  width: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.stop-start {
+  background-image: url(img/start.png);
+}
+
+.instance-item.started .stop-start {
+/* .stop-start.started { */
+  background-image: url(img/stop.png);
+}
+
+.close {
+  background-image: url(img/close.png);
+}
+
+
+
+.messanger-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 10px;
+  width: 400px;
+  height: 400px;
+}
+
+#list-msg {
+  height: 100%;
+  overflow: auto;
+  padding: 0;
+  padding-right: 15px;
+  font-size: 12px;
+}
+
+.list-item-msg {
+  display: flex;
+  padding: 10px 0;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #000000;
+}
+
+.list-item-msg.active {
+  align-items: flex-end;
+}
+
+.active > .list-item-head {
+  color: #ff0000;
+}
+.hidden {
+  display: none;
+}
+
+/*# sourceMappingURL=main.css.map*/
